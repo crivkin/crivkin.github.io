@@ -7,26 +7,22 @@ import {
   CheckListPage
 } from './pages/index';
 import { connect } from 'react-redux';
-import { LANGUAGES } from './config.js';
+// import { LANGUAGES } from './config.js';
 import {
   mapStateToPropsLang,
   UPDATE_LANGUAGE
 
 } from './redux/actions';
 
-// TODO: change lang to 
-
 class Pages extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props);
-
+    // TODO: POTENTIAL ISSUE - CHANGING LANG THEN RELOADING REVERTS CHANGE
     // if languages are different
     if (this.props.language.lang !== this.props.match.params.lang) {
       // dispatch an action to change language
       this.props.dispatch({type: UPDATE_LANGUAGE, lang: this.props.match.params.lang});
-      console.log('cambiado');
     }
   }
 
