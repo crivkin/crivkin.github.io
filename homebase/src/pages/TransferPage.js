@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { TopBar } from '../components';
+import { connect } from 'react-redux';
+import { LANGUAGES } from '../config.js';
+import { mapStateToPropsLang } from '../redux/actions';
+
+const PAGE_COPY = LANGUAGES['resources_pages'];
 
 class TransferPage extends Component {
   render() {
@@ -12,4 +17,4 @@ class TransferPage extends Component {
   }
 }
 
-export default TransferPage;
+export default connect(mapStateToPropsLang)(TransferPage);
