@@ -27,6 +27,8 @@ const linkTextStyle = {
 // 2: description
 // 3: link
 
+// TODO: FIX THE HEIGHT OF THE CARD COMPONENT
+
 class LinkCard extends Component {
 	constructor(props) {
 		super(props);
@@ -53,7 +55,7 @@ class LinkCard extends Component {
 					<h3>{this.props.pageName}</h3>
 				</div>
 				<div className='cardDescription' style={this.state.descriptionStyle}>
-					<p>Description</p>
+					<p>{this.props.description}</p>
 				</div>
 				<Link to={this.props.path} style={linkTextStyle}>
 					<div className='cardLink' style={this.state.linkStyle}>

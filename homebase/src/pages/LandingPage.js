@@ -6,7 +6,6 @@ import { LANGUAGES } from '../config.js';
 import { mapStateToPropsLang } from '../redux/actions';
 
 const LANDING_CARD_CLASS = 'landingCardClass';
-
 const PAGE_COPY = LANGUAGES['landing_page'];
 
 class LandingPage extends Component {
@@ -21,6 +20,7 @@ class LandingPage extends Component {
                       color='hsl(0, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
                       pageName={PAGE_COPY['card_titles']['resources'][this.props.language.lang]}
+                      description={PAGE_COPY['card_descriptions']['resources'][this.props.language.lang]}
                     />
                     <LinkCard
                       path={`${this.props.language.lang}/checklist`}
@@ -28,6 +28,7 @@ class LandingPage extends Component {
                       color='hsl(185, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
                       pageName={PAGE_COPY['card_titles']['checklist'][this.props.language.lang]}
+                      description={PAGE_COPY['card_descriptions']['checklist'][this.props.language.lang]}
                     />
                     <LinkCard
                       path={`${this.props.language.lang}/transfer`}
@@ -35,6 +36,7 @@ class LandingPage extends Component {
                       color='hsl(100, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
                       pageName={PAGE_COPY['card_titles']['transfer'][this.props.language.lang]}
+                      description={PAGE_COPY['card_descriptions']['transfer'][this.props.language.lang]}
                     />
                 </div>
             </div>
