@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FEFEFE;
+  background: white;
 }
 
 code {
@@ -86,4 +86,19 @@ label {
 span.price {
   float: right;
   color: grey;
+}
+
+.landingCardClass {
+  display: inline-block;
+  margin: 48px;
+  width: 20%;
+}
+
+.LinkCard {
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.LinkCard:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
 }

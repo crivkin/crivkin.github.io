@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
 import './App.css';
-import {
-  LandingPage,
-  ResourcesPage,
-  TransferPage,
-  CheckListPage
-} from './pages';
+import Pages from './Pages';
+import { mapStateToPropsLang } from './redux/actions';
 
 class App extends Component {
   render() {
@@ -14,10 +11,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className='router'>
-            <Route exact path='/' component={LandingPage} />
-            <Route path='/resources' component={ResourcesPage} />
-            <Route path='/transfer' component={TransferPage} />
-            <Route path='/checklist' component={CheckListPage} />
+            <Route exact path='/'
+              render={() => <Redirect to={`/${this.props.language.lang}`} />}
+            />
+            <Route path='/:lang' component={Pages} />
           </div>
         </Router>
       </div>
@@ -25,4 +22,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToPropsLang)(App);
