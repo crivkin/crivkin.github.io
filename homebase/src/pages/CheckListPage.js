@@ -7,12 +7,45 @@ import { mapStateToPropsLang } from '../redux/actions';
 const PAGE_COPY = LANGUAGES['checklist_page'];
 
 class CheckListPage extends Component {
+
   render() {
     return (
-      <div className="CheckListPage">
-      	<TopBar />
-        <p>This is the CheckList Page</p>
-      </div>
+    	<div>
+    	<TopBar/>
+    	<h3>Roadmap</h3>
+        <div><h4><Item message="File Citizenship Form" /></h4></div>
+        <div><h4><Item message="Study for Citizenship test" /></h4></div>
+        <div><h4><Item message="Complete I9" /></h4></div>
+        </div>
+    );
+  }
+}
+
+class Item extends React.Component {
+  constructor (props){
+    super ();
+
+    this.state = {
+      checked: false
+    };
+
+    this.handleClick = this.handleClick.bind(this);    
+  }
+  handleClick (e){
+    this.setState({
+      checked: !this.state.checked
+    });
+
+  }
+  render (){
+    let text = this.state.checked ? <strike>{this.props.message}</strike> : this.props.message;
+    return (
+        <div className="row">
+          <div className="col-md-12">
+            <input type="checkbox" onClick={this.handleClick} />&nbsp;{text}
+            <hr />
+          </div>
+        </div>
     );
   }
 }
