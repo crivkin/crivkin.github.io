@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div className='router'>
             <Route exact path='/'
               render={() => <Redirect to={`/${this.props.language.lang}`} />}
