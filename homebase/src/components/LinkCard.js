@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom';
 const graphicStyle = {
 	padding: '12px',
 	borderBottom: '1px solid',
-	fontSize: '24px'
+	fontSize: '24px',
+	height: '72px'
 }
 
 const descriptionStyle = {
 	padding: '24px',
 	borderBottom: '1px solid',
-	borderColor: '#CCCCCC'
+	borderColor: '#CCCCCC',
+	height: '180px'
 }
 
 const linkStyle = {
 	padding: '24px',
+	height: '72px'
 }
 
 const linkTextStyle = {

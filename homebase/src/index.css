@@ -88,6 +88,10 @@ span.price {
   color: grey;
 }
 
+.resourceGroup {
+  margin-bottom: 48px;
+}
+
 .resourceCardClass {
   display: inline-block;
   width: 20%;
@@ -95,7 +99,7 @@ span.price {
 }
 
 .resourceCardClass h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .landingCardClass {

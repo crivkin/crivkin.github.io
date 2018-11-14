@@ -3,7 +3,10 @@ import { TopBar } from '../components';
 import { connect } from 'react-redux';
 import { LANGUAGES } from '../config.js';
 import { mapStateToPropsLang } from '../redux/actions';
-import { LEGAL_RESOURCES } from '../content/resources';
+import { 
+	LEGAL_RESOURCES,
+	GENERAL_RESOURCES
+} from '../content/resources';
 import { LinkCard } from '../components';
 
 const PAGE_COPY = LANGUAGES['resources_pages'];
@@ -34,6 +37,10 @@ const categoryColors = {
 	'Legal': {
 		background: 'hsl(0, 50%, 50%)',
 		color: 'hsl(0, 50%, 100%)'
+	},
+	'General': {
+		background: 'hsl(25, 50%, 50%)',
+		color: 'hsl(25, 50%, 100%)'
 	}
 }
 
@@ -70,6 +77,10 @@ class ResourcesPage extends Component {
       	<TopBar />
       	<h2>Resources</h2>
       	<div className='resources-content' style={contentStyle}>
+      		<ResourceGroup
+      			category='General'
+      			content={GENERAL_RESOURCES}
+      		/>
       		<ResourceGroup
       			category='Legal'
       			content={LEGAL_RESOURCES}
