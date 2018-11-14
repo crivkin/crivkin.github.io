@@ -88,6 +88,16 @@ span.price {
   color: grey;
 }
 
+.resourceCardClass {
+  display: inline-block;
+  width: 20%;
+  margin-right: 5%;
+}
+
+.resourceCardClass h3 {
+  font-size: 24px;
+}
+
 .landingCardClass {
   display: inline-block;
   margin: 48px;
@@ -97,6 +107,7 @@ span.price {
 .LinkCard {
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
+  text-align: center;
 }
 
 .LinkCard:hover {

@@ -52,16 +52,25 @@ class LinkCard extends Component {
 		return (
 			<div className={`LinkCard ${this.props.cardClass}`}>
 				<div className='cardGraphic' style={this.state.graphicStyle}>
-					<h3>{this.props.pageName}</h3>
+					<h3>{this.props.title}</h3>
 				</div>
 				<div className='cardDescription' style={this.state.descriptionStyle}>
 					<p>{this.props.description}</p>
 				</div>
+				{
+				(this.props.internal) ?
 				<Link to={this.props.path} style={linkTextStyle}>
 					<div className='cardLink' style={this.state.linkStyle}>
-						{this.props.pageName}
+						{this.props.title}
 					</div>
 				</Link>
+				:
+				<a href={this.props.path} style={linkTextStyle}>
+					<div className='cardLink' style={this.state.linkStyle}>
+						{this.props.title}
+					</div>
+				</a>
+				}
 			</div>
 		);
 	}

@@ -11,7 +11,7 @@ class CheckListPage extends Component {
     return (
       <div className="CheckListPage">
       	<TopBar />
-        <p>This is the CheckList Page</p>
+      	<h2>Checklist</h2>
       </div>
     );
   }

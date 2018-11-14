@@ -19,24 +19,27 @@ class LandingPage extends Component {
                       background='hsl(0, 50%, 50%)'
                       color='hsl(0, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
-                      pageName={PAGE_COPY['card_titles']['resources'][this.props.language.lang]}
+                      title={PAGE_COPY['card_titles']['resources'][this.props.language.lang]}
                       description={PAGE_COPY['card_descriptions']['resources'][this.props.language.lang]}
+                      internal={true}
                     />
                     <LinkCard
                       path={`${this.props.language.lang}/checklist`}
                       background='hsl(185, 50%, 25%)'
                       color='hsl(185, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
-                      pageName={PAGE_COPY['card_titles']['checklist'][this.props.language.lang]}
+                      title={PAGE_COPY['card_titles']['checklist'][this.props.language.lang]}
                       description={PAGE_COPY['card_descriptions']['checklist'][this.props.language.lang]}
+                      internal={true}
                     />
                     <LinkCard
                       path={`${this.props.language.lang}/transfer`}
                       background='hsl(100, 50%, 50%)'
                       color='hsl(100, 50%, 100%)'
                       cardClass={LANDING_CARD_CLASS}
-                      pageName={PAGE_COPY['card_titles']['transfer'][this.props.language.lang]}
+                      title={PAGE_COPY['card_titles']['transfer'][this.props.language.lang]}
                       description={PAGE_COPY['card_descriptions']['transfer'][this.props.language.lang]}
+                      internal={true}
                     />
                 </div>
             </div>
