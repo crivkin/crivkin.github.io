@@ -12,7 +12,9 @@ import {
 const PAGE_COPY = LANGUAGES['topBar'];
 
 const topBarStyle = {
-	position: 'relative'
+	position: 'relative',
+	marginTop: '4em',
+	marginBottom: '4em'
 }
 
 const linkStyle = {
@@ -27,7 +29,7 @@ const titleStyle = {
 const langStyle = {
 	position: 'absolute',
 	right: '15%',
-	top: '45%'
+	top: '0%'
 }
 
 class TopBar extends Component {

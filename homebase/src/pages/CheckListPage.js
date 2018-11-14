@@ -12,7 +12,7 @@ class CheckListPage extends Component {
     return (
     	<div>
     	<TopBar/>
-    	<h3>Roadmap</h3>
+    	<h2>Checklist</h2>
         <div><h4><Item message="File Citizenship Form" /></h4></div>
         <div><h4><Item message="Study for Citizenship test" /></h4></div>
         <div><h4><Item message="Complete I9" /></h4></div>

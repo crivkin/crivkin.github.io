@@ -28,7 +28,7 @@ class TransferPage extends Component {
       return (
         <div className="TransferPage">
         <TopBar />
-        <h2>Transfer Page</h2>
+        <h2>Transfer</h2>
         <div class="row">
           <div class="col-50">
 
