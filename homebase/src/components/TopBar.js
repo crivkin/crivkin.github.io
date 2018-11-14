@@ -13,8 +13,8 @@ const PAGE_COPY = LANGUAGES['topBar'];
 
 const topBarStyle = {
 	position: 'relative',
-	marginTop: '4em',
-	marginBottom: '4em'
+	marginTop: '3em',
+	marginBottom: '3em'
 }
 
 const linkStyle = {
